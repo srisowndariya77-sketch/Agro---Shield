@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agro Shield | Smart Farming Support</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <a href="#home" class="logo">🌱 Agro Shield</a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#weather">Weather</a>
+            <a href="#plant-health">Plant Health</a>
+            <a href="#support">Farmer Support</a>
+        </nav>
+    </header>
+
+    <!-- HOME -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+            <span class="tagline">SMART AGRICULTURE SOLUTIONS</span>
+
+            <h1>Protect Your Crops.<br>
+                <span>Grow Your Future.</span>
+            </h1>
+
+            <p>
+                Empowering farmers with smart weather monitoring,
+                crop protection guidance and reliable agricultural support.
+            </p>
+
+            <a href="#services" class="main-button">Explore Services →</a>
+
+            <div class="hero-points">
+                <span>✓ Weather Monitoring</span>
+                <span>✓ Crop Protection</span>
+                <span>✓ Farmer Support</span>
+            </div>
+        </div>
+
+        <div class="hero-image">
+            <img src="images/farm.jpg.png" alt="Green agricultural farm">
+        </div>
+
+    </section>
+
+    <!-- SERVICES -->
+    <section id="services" class="section">
+
+        <div class="section-heading">
+            <span>WHAT WE OFFER</span>
+            <h2>Our Smart Farming Services</h2>
+            <p>Simple digital solutions to support better farming decisions.</p>
+        </div>
+
+        <div class="service-container">
+
+            <div class="service-card">
+                <div class="service-icon">🌦️</div>
+                <h3>Weather Alerts</h3>
+                <p>
+                    Monitor current weather and seven-day forecasts
+                    to prepare for changing weather conditions.
+                </p>
+                <a href="#weather">Explore Weather →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🌿</div>
+                <h3>Plant Health</h3>
+                <p>
+                    Record plant symptoms and receive preliminary
+                    guidance about possible plant problems.
+                </p>
+                <a href="#plant-health">Check Plant Health →</a>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">🤝</div>
+                <h3>Farmer Support</h3>
+                <p>
+                    Prepare crop-related help requests and
+                    seek guidance from agricultural specialists.
+                </p>
+                <a href="#support">Get Support →</a>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section id="how-it-works" class="steps-section">
+
+        <div class="section-heading">
+            <span>OUR PROCESS</span>
+            <h2>How Agro Shield Works</h2>
+            <p>Three simple steps for smarter agricultural support.</p>
+        </div>
+
+        <div class="steps-container">
+
+            <div class="step-card">
+                <div class="step-number">01</div>
+                <h3>Enter Your Details</h3>
+                <p>Enter your location and select your crop.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">02</div>
+                <h3>Monitor Your Crops</h3>
+                <p>Check weather forecasts and crop precautions.</p>
+            </div>
+
+            <div class="step-card">
+                <div class="step-number">03</div>
+                <h3>Get Guidance</h3>
+                <p>Record plant symptoms and seek expert guidance.</p>
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- WEATHER -->
+    <section id="weather" class="section">
+
+        <div class="section-heading">
+            <span>WEATHER & CROP PROTECTION</span>
+            <h2>Weather Monitoring</h2>
+            <p>Check crop precautions and local weather forecasts.</p>
+        </div>
+
+        <div class="tool-card">
+
+            <h3>🌾 Crop Precautions</h3>
+            <p>Select your crop to view general precautions.</p>
+
+            <select id="crop">
+                <option value="rice">Rice</option>
+                <option value="cotton">Cotton</option>
+                <option value="tomato">Tomato</option>
+                <option value="banana">Banana</option>
+            </select>
+
+            <button onclick="showPrecautions()">Check Precautions</button>
+
+            <div id="weather-result"></div>
+
+            <div class="tool-divider"></div>
+
+            <h3>🌦️ Live Weather Monitoring</h3>
+            <p>Enter your city name to check the weather forecast.</p>
+
+            <input
+                type="text"
+                id="location"
+                placeholder="Enter your city name"
+            >
+
+            <button onclick="getWeather()">Get Weather Forecast</button>
+
+            <div id="live-weather-result"></div>
+
+        </div>
+
+    </section>
+
+    <!-- PLANT HEALTH -->
+    <section id="plant-health" class="section alternate">
+
+        <div class="section-heading">
+            <span>PLANT CARE</span>
+            <h2>Plant Health Guidance</h2>
+            <p>
+                Describe the symptoms observed in your plants
+                to receive preliminary guidance.
+            </p>
+        </div>
+
+        <div class="tool-card">
+
+            <div class="large-icon">🌱</div>
+
+            <h3>Describe Your Plant Symptoms</h3>
+
+            <textarea
+                id="symptoms"
+                rows="5"
+                placeholder="Example: Yellow leaves, brown spots, wilting..."
+            ></textarea>
+
+            <button onclick="submitSymptoms()">Check Plant Symptoms</button>
+
+            <div id="plant-result"></div>
+
+        </div>
+
+    </section>
+
+    <!-- FARMER SUPPORT -->
+    <section id="support" class="section">
+
+        <div class="section-heading">
+            <span>WE ARE HERE TO HELP</span>
+            <h2>Farmer Support</h2>
+            <p>Prepare your agricultural assistance request.</p>
+        </div>
+
+        <div class="support-form">
+
+            <h3>🤝 Agricultural Help Request</h3>
+
+            <label for="farmer-name">Farmer Name</label>
+            <input
+                type="text"
+                id="farmer-name"
+                placeholder="Enter your name"
+            >
+
+            <label for="farmer-crop">Select Your Crop</label>
+            <select id="farmer-crop">
+                <option value="">Select Crop</option>
+                <option value="Rice">Rice</option>
+                <option value="Cotton">Cotton</option>
+                <option value="Tomato">Tomato</option>
+                <option value="Banana">Banana</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <label for="farmer-issue">Describe Your Problem</label>
+            <textarea
+                id="farmer-issue"
+                rows="5"
+                placeholder="Describe your agricultural problem..."
+            ></textarea>
+
+            <button onclick="requestSupport()">Submit Help Request</button>
+
+            <div id="support-result"></div>
+
+        </div>
+
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+
+        <h2>🌱 Agro Shield</h2>
+
+        <p>Smart Farming Support for a Better Agricultural Future.</p>
+
+        <div class="footer-links">
+            <a href="#home">Home</a>
+            <a href="#services">Services</a>
+            <a href="#weather">Weather</a>
+            <a href="#support">Support</a>
+        </div>
+
+        <p class="copyright">
+            © 2026 Agro Shield. All Rights Reserved.
+        </p>
+
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

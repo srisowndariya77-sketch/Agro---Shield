@@ -1,0 +1,871 @@
+/* =========================================
+   AGRO SHIELD - COMPLETE STYLING
+========================================= */
+
+/* GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8f2;
+    color: #333;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+    background: #174b35;
+    color: white;
+    padding: 20px 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #b9e5a9;
+}
+
+/* HERO SECTION */
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    padding: 70px 7%;
+    background: #e5f0df;
+}
+
+.hero-content {
+    flex: 1;
+}
+
+.hero-content h1,
+.hero-content h2 {
+    font-size: 42px;
+    color: #174b35;
+    margin-bottom: 20px;
+}
+
+.hero-content p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+}
+
+.hero-image {
+    flex: 1;
+    min-width: 0;
+}
+
+.hero-image img,
+.hero > img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 15px;
+    box-shadow: 0 5px 20px #00000020;
+}
+
+.main-button {
+    display: inline-block;
+    background: #28734e;
+    color: white;
+    padding: 13px 22px;
+    border: none;
+    border-radius: 6px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* COMMON SECTION STYLING */
+
+#services,
+#how-it-works,
+#weather,
+#plant-health,
+#support,
+.features,
+.how-it-works,
+.weather-section,
+.plant-section,
+.support-section {
+    padding: 65px 7%;
+    text-align: center;
+}
+
+#services h2,
+#how-it-works h2,
+#weather h2,
+#plant-health h2,
+#support h2,
+.features h2,
+.how-it-works h2,
+.weather-section h2,
+.plant-section h2,
+.support-section h2 {
+    color: #174b35;
+    font-size: 32px;
+    margin-bottom: 25px;
+}
+
+/* SERVICES */
+
+.service-container,
+.feature-container,
+.steps-container {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.service-card,
+.card,
+.step-card {
+    background: white;
+    padding: 30px;
+    width: 280px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px #00000015;
+    transition: transform 0.3s;
+}
+
+.service-card:hover,
+.card:hover {
+    transform: translateY(-5px);
+}
+
+.service-card h3,
+.card h3,
+.step-card h3 {
+    color: #28734e;
+    margin-bottom: 15px;
+}
+
+.service-card p,
+.card p,
+.step-card p {
+    line-height: 1.7;
+}
+
+#how-it-works,
+.how-it-works {
+    background: #eaf3e5;
+}
+
+.section-description {
+    margin-bottom: 35px;
+}
+
+/* WEATHER SECTION */
+
+#weather,
+.weather-section {
+    background: #f5f8f2;
+    text-align: center;
+}
+
+/* Weather heading */
+
+#weather h2 {
+    text-align: center;
+}
+
+/* Weather form */
+
+#weather form,
+.weather-box {
+    width: 100%;
+    max-width: 760px;
+    margin: 25px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000012;
+}
+
+/* City input */
+
+#location,
+#weather input,
+.weather-box select {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    padding: 15px;
+    margin: 15px auto 20px;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-size: 16px;
+    background: white;
+}
+
+/* Weather buttons */
+
+#weather button,
+.weather-box button {
+    margin: 10px auto;
+}
+
+/* Weather result */
+
+#live-weather-result,
+#weather-result {
+    width: 100%;
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 20px;
+    line-height: 1.8;
+    text-align: left;
+    border-radius: 12px;
+}
+
+/* Weather dashboard */
+
+.weather-dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    margin: 25px auto;
+}
+
+.weather-card,
+.forecast-card {
+    background: #eaf5ee;
+    padding: 22px;
+    border-radius: 10px;
+    border-left: 4px solid #28734e;
+    text-align: center;
+    min-width: 0;
+}
+
+.weather-card h4 {
+    color: #28734e;
+    margin-bottom: 10px;
+}
+
+.weather-card p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* PLANT HEALTH SECTION */
+
+#plant-health,
+.plant-section {
+    background: #eaf3e5;
+    text-align: center;
+}
+
+/* Plant form container */
+
+#plant-health form,
+.plant-box {
+    width: 100%;
+    max-width: 760px;
+    margin: 25px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000012;
+}
+
+/* Plant description */
+
+#symptoms,
+.plant-box textarea {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 130px;
+    padding: 15px;
+    margin: 20px auto;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    resize: vertical;
+}
+
+/* Plant result */
+
+#plant-result {
+    width: 100%;
+    max-width: 760px;
+    margin: 25px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* FARMER SUPPORT */
+
+#support,
+.support-section {
+    background: #f5f8f2;
+    text-align: center;
+}
+
+.support-form,
+.support-card {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px #00000012;
+    text-align: left;
+}
+
+.support-form label,
+.support-card label {
+    display: block;
+    margin: 15px 0 8px;
+    font-weight: bold;
+}
+
+.support-form input,
+.support-form select,
+.support-form textarea,
+.support-card input,
+.support-card select,
+.support-card textarea,
+#farmer-name,
+#farmer-crop,
+#farmer-issue {
+    width: 100%;
+    padding: 13px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 7px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+}
+
+.support-form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#support-result {
+    margin-top: 20px;
+    line-height: 1.8;
+}
+
+/* ALL BUTTONS */
+
+button {
+    padding: 13px 22px;
+    background: #28734e;
+    color: white;
+    border: none;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 15px;
+    transition: background 0.3s;
+}
+
+button:hover,
+.main-button:hover {
+    background: #174b35;
+}
+
+/* INPUT FOCUS */
+
+input:focus,
+select:focus,
+textarea:focus {
+    outline: 2px solid #8bbd99;
+    border-color: #28734e;
+}
+
+/* NOTES */
+
+.note {
+    margin-top: 20px;
+    font-size: 13px;
+    color: #777;
+}
+
+/* FOOTER */
+
+footer {
+    background: #174b35;
+    color: white;
+    text-align: center;
+    padding: 25px;
+}
+
+/* RESPONSIVE DESIGN */
+
+@media (max-width: 768px) {
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+        gap: 15px;
+    }
+
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 45px 6%;
+    }
+
+    .hero-content h1,
+    .hero-content h2 {
+        font-size: 30px;
+    }
+
+    .hero-image,
+    .hero > img {
+        width: 100%;
+    }
+
+    .hero-image img,
+    .hero > img {
+        height: 250px;
+    }
+
+    #services,
+    #how-it-works,
+    #weather,
+    #plant-health,
+    #support {
+        padding: 45px 5%;
+    }
+
+    .weather-dashboard {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #weather form,
+    .weather-box,
+    #plant-health form,
+    .plant-box,
+    .support-form,
+    .support-card {
+        padding: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .weather-dashboard {
+        grid-template-columns: 1fr;
+    }
+
+    .service-card,
+    .card,
+    .step-card {
+        width: 100%;
+    }
+
+    #weather h2,
+    #plant-health h2,
+    #support h2 {
+        font-size: 25px;
+    }
+
+    nav {
+        gap: 12px;
+    }
+
+}
+/* =====================================
+   AGRO SHIELD - NEW PROFESSIONAL DESIGN
+===================================== */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f8f2;
+    color: #333;
+}
+
+/* Common Section Styling */
+
+#services,
+#how-it-works,
+#weather,
+#plant-health,
+#support {
+    width: 100%;
+    padding: 65px 20px;
+    text-align: center;
+}
+
+/* Section Headings */
+
+#services h2,
+#how-it-works h2,
+#weather h2,
+#plant-health h2,
+#support h2 {
+    color: #174b35;
+    font-size: 30px;
+    margin-bottom: 18px;
+    text-align: center;
+}
+
+/* Weather Section */
+
+#weather {
+    background: #f5f8f2;
+}
+
+#weather > p {
+    margin-bottom: 25px;
+}
+
+#location {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    height: 52px;
+    padding: 15px;
+    margin: 25px auto;
+    border: 1px solid #cbd8ca;
+    border-radius: 9px;
+    font-size: 16px;
+    background: white;
+}
+
+#weather button {
+    display: block;
+    margin: 20px auto;
+    min-width: 150px;
+}
+
+#live-weather-result {
+    width: 100%;
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.weather-dashboard {
+    width: 100%;
+    max-width: 1000px;
+    margin: 25px auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.weather-card {
+    background: white;
+    padding: 25px 15px;
+    border-radius: 12px;
+    box-shadow: 0 3px 12px #00000012;
+    text-align: center;
+}
+
+/* Plant Health Section */
+
+#plant-health {
+    background: #eaf3e5;
+}
+
+#plant-health > p {
+    max-width: 750px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+#symptoms {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    min-height: 150px;
+    margin: 25px auto;
+    padding: 18px;
+    border: 1px solid #cbd8ca;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 15px;
+    resize: vertical;
+    background: white;
+}
+
+#plant-health button {
+    display: block;
+    margin: 20px auto;
+    min-width: 190px;
+}
+
+#plant-result {
+    width: 100%;
+    max-width: 650px;
+    margin: 25px auto;
+    padding: 22px;
+    background: white;
+    border-radius: 12px;
+    line-height: 1.8;
+    text-align: left;
+}
+
+/* Farmer Support */
+
+#support {
+    background: #f5f8f2;
+}
+
+.support-form {
+    width: 100%;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    background: white;
+    border-radius: 14px;
+    box-shadow: 0 4px 15px #00000012;
+    text-align: left;
+}
+
+.support-form label {
+    display: block;
+    margin: 18px 0 8px;
+    font-weight: bold;
+    color: #174b35;
+}
+
+.support-form input,
+.support-form select,
+.support-form textarea {
+    width: 100%;
+    padding: 13px;
+    border: 1px solid #cbd8ca;
+    border-radius: 8px;
+    font-size: 15px;
+}
+
+.support-form button {
+    display: block;
+    margin: 25px auto 0;
+}
+
+/* Buttons */
+
+button {
+    background: #28734e;
+    color: white;
+    padding: 13px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #174b35;
+}
+
+/* Mobile Responsive */
+
+@media (max-width: 768px) {
+
+    #services,
+    #how-it-works,
+    #weather,
+    #plant-health,
+    #support {
+        padding: 45px 18px;
+    }
+
+    #weather h2,
+    #plant-health h2,
+    #support h2 {
+        font-size: 25px;
+    }
+
+    .weather-dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #location,
+    #symptoms,
+    #plant-result {
+        max-width: 100%;
+    }
+
+    .support-form {
+        padding: 20px;
+    }
+}
+
+@media (max-width: 450px) {
+    .weather-dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* =================================
+   WEATHER SECTION - FINAL DESIGN
+================================= */
+
+#weather {
+    width: 100%;
+    padding: 55px 7%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#weather h2 {
+    margin-bottom: 20px;
+    font-size: 34px;
+}
+
+#weather h3 {
+    color: #174b35;
+    margin: 25px 0 15px;
+    font-size: 23px;
+}
+
+#weather p {
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+/* Crop Selection */
+
+#weather #crop {
+    display: block;
+    width: 100%;
+    max-width: 450px;
+    padding: 13px;
+    margin: 12px auto 18px;
+    border: 1px solid #cbd8cb;
+    border-radius: 8px;
+    background: white;
+    font-size: 16px;
+}
+
+/* Weather Buttons */
+
+#weather button {
+    display: block;
+    min-width: 190px;
+    margin: 12px auto 25px;
+    padding: 14px 22px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+/* City Input */
+
+#location {
+    display: block;
+    width: 100%;
+    max-width: 650px;
+    margin: 15px auto;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* Weather Results */
+
+#live-weather-result {
+    width: 100%;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 25px;
+    text-align: left;
+    border-radius: 12px;
+}
+
+.weather-dashboard {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 18px;
+    width: 100%;
+    margin: 25px auto;
+}
+
+.weather-card {
+    min-width: 0;
+    padding: 22px;
+    text-align: center;
+    border-radius: 12px;
+}
+
+.forecast-card {
+    padding: 18px;
+    margin: 15px 0;
+    background: #eaf5ee;
+    border-radius: 10px;
+}
+
+/* Mobile Alignment */
+
+@media (max-width: 768px) {
+
+    #weather {
+        padding: 40px 5%;
+    }
+
+    #weather h2 {
+        font-size: 27px;
+    }
+
+    .weather-dashboard {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    #live-weather-result {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 450px) {
+
+    .weather-dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
